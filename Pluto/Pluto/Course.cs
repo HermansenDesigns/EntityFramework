@@ -12,10 +12,10 @@ namespace Pluto
     using System;
     using System.Collections.Generic;
     
-    public partial class Cours
+    public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cours()
+        public Course()
         {
             this.CourseSections = new HashSet<CourseSection>();
             this.Tags = new HashSet<Tag>();
@@ -25,9 +25,8 @@ namespace Pluto
         public int AuthorID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public short Price { get; set; }
-        public string LevelString { get; set; }
         public byte Level { get; set; }
+        public short FullPrice { get; set; }
     
         public virtual Author Author { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
